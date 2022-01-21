@@ -2,8 +2,9 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Arial;
+  background-color: #121213;
+  color: #d7dadc;
 }
 
 a {
@@ -13,4 +14,30 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+
+.tile {
+  width: 50px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: bold;
+  vertical-align: middle;
+  box-sizing: border-box;
+  color: var(--tile-text-color);
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.confirmedLetters {
+  display: flex;
+  flex-direction: row;
+}
+
+.input {
+  font-size: 18px;
+  width: 20px;
 }
