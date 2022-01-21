@@ -3,7 +3,7 @@ import { ConfirmedLettersContext } from "../contexts/ConfirmedLettersContext";
 
 function ConfirmedLetter({order}) {
 
-    const { confirmedLetters, setConfirmedLetters } = useContext(ConfirmedLettersContext);
+    const { confirmedLetters, setConfirmedLetters, eliminatedLetters, setEliminatedLetters } = useContext(ConfirmedLettersContext);
 
     function letterChanged(index, value){
 

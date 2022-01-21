@@ -7,14 +7,18 @@ function ConfirmedLettersProvider({ children }) {
 
     const {
         confirmedLetters,
-        setConfirmedLetters
+        setConfirmedLetters,
+        eliminatedLetters,
+        setEliminatedLetters
     } = useConfirmedLetters();
      
     return (
         <ConfirmedLettersContext.Provider
             value={{
                 confirmedLetters,
-                setConfirmedLetters
+                setConfirmedLetters,
+                eliminatedLetters,
+                setEliminatedLetters
             }}
         >
             {children}
