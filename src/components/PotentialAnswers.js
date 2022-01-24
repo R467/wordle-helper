@@ -3,7 +3,7 @@ import { ConfirmedLettersContext } from "../contexts/ConfirmedLettersContext";
 import { WordList } from "../../WordList";
 
 function PotentialAnswers() {
-    const { confirmedLetters, setConfirmedLetters, eliminatedLetters } = useContext(ConfirmedLettersContext);
+    const { confirmedLetters, setConfirmedLetters, eliminatedLetters, presentLetters } = useContext(ConfirmedLettersContext);
 
     function checkedMatchedLetters(word){
         return checkMatchedLetter(0, word) &&
@@ -28,13 +28,6 @@ function PotentialAnswers() {
         const elMatches = eliminatedLetters.find((el) => {
             return el != "" && word.includes(el);
         })
-
-        if(word === "zonal")
-        {
-            console.log(word);
-            console.log("elMatches", elMatches);
-        }
-        
         
         if(elMatches) 
         {
@@ -42,6 +35,19 @@ function PotentialAnswers() {
         }
 
         return true;
+    }
+
+    function checkPresentLetters(word) {
+        const presentMatches = presentLetters.filter((pl) => {
+            return pl != "" && word.includes(pl);
+        })
+
+        if(presentMatches?.length === presentLetters?.length) 
+        {
+            return true;
+        }
+
+        return false;
     }
     
     let counter = 0;
@@ -51,7 +57,8 @@ function PotentialAnswers() {
                 {                    
                     if(
                         checkedMatchedLetters(word) &&
-                        checkEliminatedLetters(word)
+                        checkEliminatedLetters(word) &&
+                        checkPresentLetters(word)
                     )
                     return true;
                 }

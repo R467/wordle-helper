@@ -54,6 +54,11 @@ button[data-state='correct'] {
   color: #d7dadc;
 }
 
+button[data-state='present'] {
+  background-color: #b59f3b;
+  color: #d7dadc;
+}
+
 .keyboardRow {
   display: flex;
   width: 100%;

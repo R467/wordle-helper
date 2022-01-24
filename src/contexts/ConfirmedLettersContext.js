@@ -9,7 +9,9 @@ function ConfirmedLettersProvider({ children }) {
         confirmedLetters,
         setConfirmedLetters,
         eliminatedLetters,
-        setEliminatedLetters
+        setEliminatedLetters,
+        presentLetters,
+        setPresentLetters
     } = useConfirmedLetters();
      
     return (
@@ -18,7 +20,9 @@ function ConfirmedLettersProvider({ children }) {
                 confirmedLetters,
                 setConfirmedLetters,
                 eliminatedLetters,
-                setEliminatedLetters
+                setEliminatedLetters,
+                presentLetters,
+                setPresentLetters
             }}
         >
             {children}
