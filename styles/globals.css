@@ -16,9 +16,13 @@ a {
   box-sizing: border-box;
 }
 
+h2 {
+  text-align: center;
+}
 
 .tile {
-  width: 50px;
+  margin-right: 6px;
+  margin-top: 6px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -35,14 +39,34 @@ a {
 .confirmedLetters {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+}
+
+.presentLetterRow {
+  display: flex;
+  justify-content: center;
 }
 
 .input {
   font-size: 18px;
-  width: 20px;
+  width: 58px;
+  height: 58px;
+  border: 2px solid #3a3a3c;
+  background-color: #121213;
+  color: #edeff1;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 30px;
 }
 
+.section {
+  margin-top: 30px;
+}
 
+.potentialWord {
+  display: flex;
+  justify-content: left;
+}
 
 button[data-state='eliminated'] {
     background-color: #3a3a3c;
@@ -59,11 +83,34 @@ button[data-state='present'] {
   color: #d7dadc;
 }
 
+.keyboard {
+  width: 500px;
+}
+
 .keyboardRow {
   display: flex;
   width: 100%;
   margin: 0 auto 8px;
   touch-action: manipulation;
+}
+
+.presentLetters {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.eliminatedLetters {
+  display: flex;
+  justify-content: center;
+}
+
+.half {
+  flex: 0.5;
+}
+
+.full {
+  flex: 1;
 }
 
 button {

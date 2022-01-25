@@ -87,7 +87,7 @@ function PotentialAnswers() {
             .map(function(letter){
                 counter = counter + 1;
                 return (
-                    <div key={counter}>{letter}</div>
+                    <div key={counter} className="potentialWord">{letter}</div>
                 )
             })}
         </div>

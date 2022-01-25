@@ -8,7 +8,7 @@ function ConfirmedLetters() {
 
 
     return (
-        <>
+        <div className="section">
             <h2>Confirmed letters</h2>
             <div className="confirmedLetters">     
                 <ConfirmedLetter order={0} />       
@@ -17,7 +17,7 @@ function ConfirmedLetters() {
                 <ConfirmedLetter order={3} />
                 <ConfirmedLetter order={4} />
             </div>
-        </>
+        </div>
     );
 }
 

@@ -79,7 +79,7 @@ function PresentLetters() {
     });
 
     return (
-        <>            
+        <div className="section">            
             <h2>Present letters</h2>
 
             <div className="presentLetters">                         
@@ -98,7 +98,7 @@ function PresentLetters() {
                     })   
                 }                    
             </div>
-        </>
+        </div>
     );
         
 }
