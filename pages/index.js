@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Main from '../src/components/Main'
 import LayoutLeft from '../src/components/LayoutLeft'
 import LayoutRight from '../src/components/LayoutRight'
