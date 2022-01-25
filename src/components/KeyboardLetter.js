@@ -5,7 +5,7 @@ function KeyboardLetter({value}) {
 
     const { confirmedLetters, setConfirmedLetters, 
             eliminatedLetters, setEliminatedLetters,
-            presentLetters, setPresentLetters
+            //presentLetters, setPresentLetters
         } = useContext(ConfirmedLettersContext);
 
     function updateState() {
@@ -19,21 +19,21 @@ function KeyboardLetter({value}) {
             setEliminatedLetters(eliminatedLetters.filter((e) =>{return e != value}));
 
             //Add to present letters
-            setPresentLetters([...presentLetters, value]);
+            //setPresentLetters([...presentLetters, value]);
         }
-        else if (presentLetters.includes(value))
+        /*else if (presentLetters.includes(value))
         {
             //Remove from both
             setEliminatedLetters(eliminatedLetters.filter((e) =>{return e != value}));
             setPresentLetters(presentLetters.filter((e) =>{return e != value}));
-        }
+        }*/
         else {
 
             //Add to eliminated letters
             setEliminatedLetters([...eliminatedLetters, value]);
 
             //Remove from present letters
-            setPresentLetters(presentLetters.filter((e) =>{return e != value}));
+            //setPresentLetters(presentLetters.filter((e) =>{return e != value}));
         }
     }
 
@@ -43,7 +43,7 @@ function KeyboardLetter({value}) {
 
         if(eliminatedLetters.includes(value)) return "eliminated";
 
-        if(presentLetters.includes(value)) return "present";
+        //if(presentLetters.includes(value)) return "present";
 
         return "";
     }

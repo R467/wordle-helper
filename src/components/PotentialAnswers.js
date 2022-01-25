@@ -38,8 +38,29 @@ function PotentialAnswers() {
     }
 
     function checkPresentLetters(word) {
-        const presentMatches = presentLetters.filter((pl) => {
+        /*const presentMatches = presentLetters.filter((pl) => {
             return pl != "" && word.includes(pl);
+        })
+
+        if(presentMatches?.length === presentLetters?.length) 
+        {
+            return true;
+        }
+
+        return false;*/
+
+        const presentMatches = presentLetters.filter((pl) => {     
+            
+            if(word == "aback") {
+                console.log("word", word)
+
+                console.log("pl", pl);
+                console.log("pl.value", pl.value)
+                console.log("pl.order", pl.order)
+                console.log("word[pl.order]", word[pl.order])
+            }
+
+            return pl[1] != "" && word.includes(pl[1]) && word[pl[0]] != pl[1];
         })
 
         if(presentMatches?.length === presentLetters?.length) 
