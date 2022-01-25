@@ -5,7 +5,7 @@ function PresentLetter({index, order, tryCreateNewRow, letterUpdated}) {
 
     const { presentRows, setPresentRows} = useContext(PresentRowsContext);
 
-    let populated = true;
+    let state = "foo";
 
     function presentLetterEntered() {
 
@@ -15,7 +15,17 @@ function PresentLetter({index, order, tryCreateNewRow, letterUpdated}) {
             setPresentRows([...presentRows, newRow]);
         }    
     }
-    
+
+    function calculateState() {
+
+        const row = presentRows[index];
+        const field = row.letters[order];
+
+        if(field.populated) return "present";
+
+        return;
+    }
+
 
     return (   
         <div className="tile">
@@ -24,6 +34,7 @@ function PresentLetter({index, order, tryCreateNewRow, letterUpdated}) {
                 className="input" 
                 maxLength="1"
                 data-key={order}
+                data-state={calculateState()}
                 onChange={(e) => {
                     letterUpdated(order, index, e.target.value);
                     presentLetterEntered();

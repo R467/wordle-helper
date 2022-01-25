@@ -78,7 +78,7 @@ button[data-state='correct'] {
   color: #d7dadc;
 }
 
-button[data-state='present'] {
+.presentLetterRow > .tile > input[data-state='present'] {
   background-color: #b59f3b;
   color: #d7dadc;
 }

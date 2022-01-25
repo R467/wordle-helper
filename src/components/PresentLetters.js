@@ -55,7 +55,6 @@ function PresentLetters() {
         if(field != "") {
             row.letters[order].populated = true;
 
-            console.log("adding " + value + " to " + presentLetters);
             setPresentLetters([...presentLetters, [order, value]]);
         }
         else {
